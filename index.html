@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Dutch Blitz Counter</title>
@@ -10,7 +10,6 @@
     <button type="button" class="btn btn-secondary btn-lg btn-block mt-3 mb-3" data-toggle="modal" data-target="#leader">
       Leaderboards
     </button>
-
     <div class="modal fade" id="leader" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -33,7 +32,6 @@
         </div>
       </div>
     </div>
-
   -->
 
     <!-- Modal -->
@@ -73,6 +71,7 @@
           </button>
         </div>
       </div>
+
       <div class="row">
         <div class="col">
           <!-- Player 1 -->
@@ -80,29 +79,29 @@
             <div class="card-body">
               <h5 class="card-title" id="p1Name">Player 1</h5>
               <form id="player1">
-                Points: <input type="text" id="p1total"><br>
+                Points: <input type="text" pattern="[0-9]*" id="p1total"><br>
                 <input class="mt-2 mb-2" type="button" onclick="p1Add()" value="Add">
               </form>
               <h4>Total: <span id="total1"></span></h4>
             </div>
           </div>
-
         </div>
+
         <div class="col">
           <!-- Player 2 -->
           <div class="card mx-auto mb-4" style="width: 18rem;">
             <div class="card-body">
               <h5 class="card-title" id="p2Name">Player 2</h5>
               <form id="player2">
-                Points: <input type="text" id="p2total"><br>
+                Points: <input type="text" pattern="[0-9]*" id="p2total"><br>
                 <input class="mt-2 mb-2" type="button" onclick="p2Add()" value="Add">
               </form>
               <h4>Total: <span id="total2"></span></h4>
             </div>
           </div>
-
         </div>
       </div>
+
       <div class="row">
         <div class="col">
           <!-- Player 3 -->
@@ -110,29 +109,29 @@
             <div class="card-body">
               <h5 class="card-title" id="p3Name">Player 3</h5>
               <form id="player3">
-                Points: <input type="text" id="p3total"><br>
+                Points: <input type="text" pattern="[0-9]*" id="p3total"><br>
                 <input class="mt-2 mb-2" type="button" onclick="p3Add()" value="Add">
               </form>
               <h4>Total: <span id="total3"></span></h4>
             </div>
           </div>
-
         </div>
+
         <div class="col">
           <!-- Player 4 -->
           <div class="card mx-auto mb-4" style="width: 18rem;">
             <div class="card-body">
               <h5 class="card-title" id="p4Name">Player 4</h5>
               <form id="player4">
-                Points: <input type="text" id="p4total"><br>
+                Points: <input type="text" pattern="[0-9]*" id="p4total"><br>
                 <input class="mt-2 mb-2" type="button" onclick="p4Add()" value="Add">
               </form>
               <h4>Total: <span id="total4"></span></h4>
             </div>
           </div>
-
         </div>
       </div>
+
       <div class="row">
         <div class="col">
           <!-- Player 5 -->
@@ -140,29 +139,29 @@
             <div class="card-body">
               <h5 class="card-title" id="p5Name">Player 5</h5>
               <form id="player5">
-                Points: <input type="text" id="p5total"><br>
+                Points: <input type="text" pattern="[0-9]*" id="p5total"><br>
                 <input class="mt-2 mb-2" type="button" onclick="p5Add()" value="Add">
               </form>
               <h4>Total: <span id="total5"></span></h4>
             </div>
           </div>
-
         </div>
+
         <div class="col">
           <!-- Player 6 -->
           <div class="card mx-auto mb-4" style="width: 18rem;">
             <div class="card-body">
               <h5 class="card-title" id="p6Name">Player 6</h5>
               <form id="player6">
-                Points: <input type="text" id="p6total"><br>
+                Points: <input type="text" pattern="[0-9]*" id="p6total"><br>
                 <input class="mt-2 mb-2" type="button" onclick="p6Add()" value="Add">
               </form>
               <h4>Total: <span id="total6"></span></h4>
             </div>
           </div>
-
         </div>
       </div>
+
       <div class="row">
         <div class="col">
           <!-- Player 7 -->
@@ -170,28 +169,28 @@
             <div class="card-body">
               <h5 class="card-title" id="p7Name">Player 7</h5>
               <form id="player7">
-                Points: <input type="text" id="p7total"><br>
+                Points: <input type="text" pattern="[0-9]*" id="p7total"><br>
                 <input class="mt-2 mb-2" type="button" onclick="p7Add()" value="Add">
               </form>
               <h4>Total: <span id="total7"></span></h4>
             </div>
           </div>
-
         </div>
+
         <div class="col">
           <!-- Player 8 -->
           <div class="card mx-auto mb-4" style="width: 18rem;">
             <div class="card-body">
               <h5 class="card-title" id="p8Name">Player 8</h5>
               <form id="player8">
-                Points: <input type="text" id="p8total"><br>
+                Points: <input type="text" pattern="[0-9]*" id="p8total"><br>
                 <input class="mt-2 mb-2" type="button" onclick="p8Add()" value="Add">
               </form>
               <h4>Total: <span id="total8"></span></h4>
             </div>
           </div>
-
         </div>
+
       </div>
     </div>
 
@@ -202,3 +201,4 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
+
