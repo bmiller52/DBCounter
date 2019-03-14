@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary btn-lg btn-block mt-3 mb-3" data-toggle="modal" data-target="#exampleModalCenter">
+      Start
+    </button>
+
+    <!--
+    <button type="button" class="btn btn-secondary btn-lg btn-block mt-3 mb-3" data-toggle="modal" data-target="#leader">
+      Leaderboards
+    </button>
+
+    <div class="modal fade" id="leader" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Leader Boards</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ol>
+              <li>one</li>
+              <li>two</li>
+            </ol>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Setup</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="setup">
+              Player 1: <input type="text" id="p1"><br>
+              Player 2: <input type="text" id="p2"><br>
+              Player 3: <input type="text" id="p3"><br>
+              Player 4: <input type="text" id="p4"><br>
+              Player 5: <input type="text" id="p5"><br>
+              Player 6: <input type="text" id="p6"><br>
+              Player 7: <input type="text" id="p7"><br>
+              Player 8: <input type="text" id="p8"><br>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" onclick="setupDone()" data-dismiss="modal">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <!-- Player 1 -->
+          <div class="card mx-auto mb-4" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title" id="p1Name">Player 1</h5>
+              <form id="player1">
+                Points: <input type="text" id="p1total"><br>
+                <input class="mt-2 mb-2" type="button" onclick="p1Add()" value="Add">
+              </form>
+              <h4>Total: <span id="total1"></span></h4>
+            </div>
+          </div>
+
+        </div>
+        <div class="col">
+          <!-- Player 2 -->
+          <div class="card mx-auto mb-4" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title" id="p2Name">Player 2</h5>
+              <form id="player2">
+                Points: <input type="text" id="p2total"><br>
+                <input class="mt-2 mb-2" type="button" onclick="p2Add()" value="Add">
+              </form>
+              <h4>Total: <span id="total2"></span></h4>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <!-- Player 3 -->
+          <div class="card mx-auto mb-4" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title" id="p3Name">Player 3</h5>
+              <form id="player3">
+                Points: <input type="text" id="p3total"><br>
+                <input class="mt-2 mb-2" type="button" onclick="p3Add()" value="Add">
+              </form>
+              <h4>Total: <span id="total3"></span></h4>
+            </div>
+          </div>
+
+        </div>
+        <div class="col">
+          <!-- Player 4 -->
+          <div class="card mx-auto mb-4" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title" id="p4Name">Player 4</h5>
+              <form id="player4">
+                Points: <input type="text" id="p4total"><br>
+                <input class="mt-2 mb-2" type="button" onclick="p4Add()" value="Add">
+              </form>
+              <h4>Total: <span id="total4"></span></h4>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <!-- Player 5 -->
+          <div class="card mx-auto mb-4" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title" id="p5Name">Player 5</h5>
+              <form id="player5">
+                Points: <input type="text" id="p5total"><br>
+                <input class="mt-2 mb-2" type="button" onclick="p5Add()" value="Add">
+              </form>
+              <h4>Total: <span id="total5"></span></h4>
+            </div>
+          </div>
+
+        </div>
+        <div class="col">
+          <!-- Player 6 -->
+          <div class="card mx-auto mb-4" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title" id="p6Name">Player 6</h5>
+              <form id="player6">
+                Points: <input type="text" id="p6total"><br>
+                <input class="mt-2 mb-2" type="button" onclick="p6Add()" value="Add">
+              </form>
+              <h4>Total: <span id="total6"></span></h4>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <!-- Player 7 -->
+          <div class="card mx-auto mb-4" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title" id="p7Name">Player 7</h5>
+              <form id="player7">
+                Points: <input type="text" id="p7total"><br>
+                <input class="mt-2 mb-2" type="button" onclick="p7Add()" value="Add">
+              </form>
+              <h4>Total: <span id="total7"></span></h4>
+            </div>
+          </div>
+
+        </div>
+        <div class="col">
+          <!-- Player 8 -->
+          <div class="card mx-auto mb-4" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title" id="p8Name">Player 8</h5>
+              <form id="player8">
+                Points: <input type="text" id="p8total"><br>
+                <input class="mt-2 mb-2" type="button" onclick="p8Add()" value="Add">
+              </form>
+              <h4>Total: <span id="total8"></span></h4>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="js/start.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
